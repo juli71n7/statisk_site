@@ -46,3 +46,20 @@ h2 {
   gap: 20px;
   margin-top: 20px;
 }
+
+@media (max-width: 700px) {
+  .category {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  }
+
+  .category a {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  h2 {
+    margin-left: 20px;
+  }
+}

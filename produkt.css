@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+body {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 30px;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 50px;
+  color: black;
+}
+
+.a1 {
+  text-decoration: none;
+}
+
+.aback {
+  color: black;
+  margin-left: 50px;
+}
+
+h2 {
+  font-family: "IBM Plex Serif", serif;
+  color: black;
+  font-size: 40px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h3 {
+  font-family: "IBM Plex Serif", serif;
+  color: black;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: "IBM Plex Serif", serif;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+dd {
+  font-family: "IBM Plex Serif", serif;
+  color: black;
+  font-size: 20px;
+}
+
+dt {
+  font-family: "IBM Plex Serif", serif;
+  color: black;
+  font-size: 20px;
+}
+
+.grid1-1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 50px;
+}
+
+/*Product box*/
+
+.purchaseBox {
+  background: #d8d8d8;
+  color: gray;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 100px;
+  margin-left: 50px;
+  justify-content: center;
+}
+.info {
+  padding: 10px;
+  margin-left: 40px;
+}
+.product select {
+  min-width: 100px;
+}
+
+.purchaseBox form label {
+  gap: 1rem;
+}
+.purchaseBox button {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .grid1-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
