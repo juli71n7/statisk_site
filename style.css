@@ -9,6 +9,14 @@ main {
   margin-inline: auto;
 }
 
+body {
+  background-image: url(img/forsidebaggrund.webp);
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .forsidebillede {
   width: 100%;
   height: 100%;
