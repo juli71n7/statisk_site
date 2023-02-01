@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+h1 {
+  text-align: center;
+  padding: 30px;
+  font-family: "Alfa Slab One", cursive;
+  font-size: 50px;
+  color: black;
+}
+
+.a1 {
+  text-decoration: none;
+}
+
+.a2 {
+  color: black;
+  margin-left: 170px;
+  margin-bottom: 50px;
+}
+
+a {
+  color: black;
+}
+
+h2 {
+  font-family: "IBM Plex Serif", serif;
+  color: black;
+  font-size: 40px;
+  padding-top: 50px;
+  margin-left: 170px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: "IBM Plex Serif", serif;
+  color: black;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-family: "IBM Plex Serif", serif;
+  color: black;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.productgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 290px));
+  gap: 50px;
+  justify-content: space-evenly;
+}
+
+.smallProduct {
+  display: flex;
+  flex-direction: column;
+}
+
+.discounted {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productlist article.soldOut img {
+  opacity: 0.5;
+}
+.productlist article.soldOut::before {
+  content: "Sold Out";
+  position: absolute;
+  background: gray;
+  color: white;
+  padding: 1rem;
+}
+
+.productlist article .discounted,
+.productlist article .price span {
+  display: none;
+}
+
+.productlist article.onSale .discounted {
+  display: flex;
+  justify-content: space-between;
+}
+
+.productlist article.onSale .price span {
+  display: initial;
+}
+
+.productlist article {
+  margin-bottom: 1rem;
+}
+.discounted p:last-child {
+  background: red;
+  padding: 0.2rem;
+}
