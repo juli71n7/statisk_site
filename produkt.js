@@ -12,10 +12,11 @@ function visProdukt(produkt) {
   console.log(produkt);
   document.querySelector("#model").textContent = produkt.productdisplayname;
   document.querySelector("#img").src = imageParth;
-  document.querySelector("#price").textContent = produkt.price;
+  document.querySelector("#price").textContent = produkt.price + "DKK";
   document.querySelector("#color").textContent = produkt.basecolour;
   document.querySelector("#brand").textContent = produkt.brandname;
   document.querySelector(".purchaseBox h3").textContent = produkt.productdisplayname;
+  document.querySelector(".purchaseBox p").textContent = produkt.brandname;
 }
 
 hentData();
