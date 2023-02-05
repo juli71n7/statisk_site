@@ -16,24 +16,28 @@
         <a class="a1" href="index.html">
             <h1>levelUp sportswear</h1>
         </a>
-        <h2>Puma</h2>
+        <h2>Products</h2>
         <a class="a2" href="kategori.html">Back to categories</a>
     </header>
     <main class="productgrid">
-        <article class="smallProduct">
-            <img src="https://kea-alt-del.dk/t7/images/webp/1000/1533.webp " alt="Orange Puma Jersy">
-            <h3>Red Round Neck Puma Jersy</h3>
-            <p class="subtle"> T-shits ⎢ Puma </p>
-            <p class="price"> <span> Prev.</span>
-                DKK 1200,-</p>
-            <div class="discounted">
-                <p>Now DKK 960,-</p>
-                <p>- 20%</p>
-            </div>
-            <a href="produkt.html">Read more</a>
-        </article>
+        <template id="smallProduktTemplate">
+            <article class="smallProduct">
+                <img id="pic" src="https://kea-alt-del.dk/t7/images/webp/1000/1533.webp " alt="">
+                <h3>Red Round Neck Puma Jersy</h3>
+                <p id="brand">Brand name: Puma</p>
+                <p id="type"> T-shirt</p>
+                <p id="category">Category: </p>
+                <p class="price"> <span> Prev.</span>
+                    DKK 1200,-</p>
+                <div class="discounted">
+                    <p>Now DKK 960,-</p>
+                    <p>- 20%</p>
+                </div>
+                <a href="produkt.html">Read more</a>
+            </article>
+        </template>
 
-
+        <!--
         <article class="smallProduct onSale">
             <img src="https://kea-alt-del.dk/t7/images/webp/1000/1533.webp " alt="Orange Puma Jersy">
             <h3>Red Round Neck Puma Jersy</h3>
@@ -86,19 +90,8 @@
             </div>
             <a href="produkt.html">Read more</a>
         </article>
+-->
 
-
-        json dimmer her
-        <template id="produktTemplate">
-            <article>
-                <img id="pic" src="https://kea-alt-del.dk/t7/images/webp/1000/1533.webp " alt="Orange Puma Jersy">
-                <h3 id="name">Red Round Neck Puma Jersy</h3>
-                <p id="brand" class="subtle"> T-shits ⎢ Puma </p>
-                <p id="price" class="price"> <span> Prev.</span>
-                    DKK 1200,-</p>
-                <a href="produkt.html">Read more</a>
-            </article>
-        </template>
     </main>
     <footer>
 
