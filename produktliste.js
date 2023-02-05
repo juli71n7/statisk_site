@@ -1,5 +1,4 @@
 const fil = `https://kea-alt-del.dk/t7/api/products?limit=20`;
-const imageParth = `https://kea-alt-del.dk/t7/images/webp/640/.webp`;
 
 function hentData() {
   fetch(fil)
@@ -11,24 +10,20 @@ const temp = document.querySelector("#smallProduktTemplate").content;
 const beholder = document.querySelector("main");
 
 function visData(data) {
-  data.forEach((produkt) => {
+  data.forEach((object) => {
     console.log(data);
 
     const klon = temp.cloneNode(true);
-    klon.querySelector("h3").textContent = produkt.productdisplayname;
-    klon.querySelector("#pic").src = imageParth;
-    klon.querySelector(".price").textContent = produkt.price;
-    klon.querySelector("#brand").textContent = produkt.brandname;
-    klon.querySelector("#type").textContent = produkt.articletype;
-    klon.querySelector("#category").textContent = produkt.category;
+    const produktid = object.id;
+    const imageParth = `https://kea-alt-del.dk/t7/images/webp/640/${produktid}/.webp`;
 
-    if (produkt.souldOut) {
-      klon.querySelector("article").classList.add("soldOut");
-    }
+    klon.querySelector("h3").textContent = object.productdisplayname;
+    klon.querySelector("img").src = imageParth;
+    klon.querySelector(".price").textContent = object.price + "DKK";
+    klon.querySelector("#brand").textContent = object.brandname;
+    klon.querySelector("#type").textContent = object.articletype;
+    klon.querySelector("#category").textContent = object.category;
 
-    if (produkt.discounted) {
-      klon.querySelector("article").classList.add("onSale");
-    }
     beholder.appendChild(klon);
   });
 }
@@ -62,3 +57,13 @@ subcategory: "Topwear"
 ​​
 usagetype: "Sports"
 */
+
+/*
+  if (produkt.soldOut) {
+    klon.querySelector("article").classList.add("soldOut");
+  }
+
+  if (produkt.discounted) {
+    klon.querySelector("article").classList.add("onSale");
+  }
+  */
