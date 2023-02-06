@@ -14,15 +14,21 @@ function visData(data) {
     console.log(data);
 
     const klon = temp.cloneNode(true);
-    const produktid = object.id;
-    const imageParth = `https://kea-alt-del.dk/t7/images/webp/640/${produktid}.webp`;
 
     klon.querySelector("h3").textContent = object.productdisplayname;
-    klon.querySelector("img").src = imageParth;
+    klon.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/640/${object.id}.webp`;
     klon.querySelector(".price").textContent = object.price + "DKK";
     klon.querySelector("#brand").textContent = object.brandname;
     klon.querySelector("#type").textContent = object.articletype;
     klon.querySelector("#category").textContent = object.category;
+
+    if (object.soldout) {
+      klon.querySelector("article").classList.add("soldOut");
+    }
+
+    if (object.discount) {
+      klon.querySelector("article").classList.add("onSale");
+    }
 
     beholder.appendChild(klon);
   });
@@ -45,13 +51,3 @@ soldout: 0
 subcategory: "Topwear"
 usagetype: "Sports"
 */
-
-/*
-  if (produkt.soldOut) {
-    klon.querySelector("article").classList.add("soldOut");
-  }
-
-  if (produkt.discounted) {
-    klon.querySelector("article").classList.add("onSale");
-  }
-  */

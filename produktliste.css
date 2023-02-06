@@ -71,15 +71,21 @@ p {
   justify-content: space-between;
 }
 
-.productlist article.soldOut img {
-  opacity: 0.5;
-}
-.productlist article.soldOut::before {
+.soldOut::before {
   content: "Sold Out";
   position: absolute;
-  background: gray;
-  color: white;
+  padding: 20px;
+  opacity: 0.5;
+  background-color: gray;
+}
+
+.soldOut::after {
+  content: "Sold Out";
+  position: absolute;
   padding: 1rem;
+  padding: 20px;
+  background-color: orange;
+  color: white;
 }
 
 .productlist article .discounted,
