@@ -1,4 +1,8 @@
-const id = 1532;
+//lav en url seach objekt
+const urlParams = new URLSearchParams(window.location.search);
+// find id
+console.log(urlParams);
+const id = urlParams.get("id");
 const url = `https://kea-alt-del.dk/t7/api/products/${id}`;
 const imageParth = `https://kea-alt-del.dk/t7/images/webp/640/${id}.webp`;
 

@@ -21,6 +21,8 @@ function visData(data) {
     klon.querySelector("#brand").textContent = object.brandname;
     klon.querySelector("#type").textContent = object.articletype;
     klon.querySelector("#category").textContent = object.category;
+    klon.querySelector("#rabat").textContent = object.discount + "%";
+    klon.querySelector("a").href = "produkt.html?id=" + object.id;
 
     if (object.soldout) {
       klon.querySelector("article").classList.add("soldOut");
@@ -28,6 +30,7 @@ function visData(data) {
 
     if (object.discount) {
       klon.querySelector("article").classList.add("onSale");
+      klon.querySelector(".nowprice").textContent = "Now " + `${Math.round(object.price - object.price * (object.discount / 100))} DKK`;
     }
 
     beholder.appendChild(klon);

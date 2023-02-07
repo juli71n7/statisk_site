@@ -87,6 +87,10 @@ p {
   color: white;
 }
 
+.soldOut {
+  opacity: 0.5;
+}
+
 .productlist article .discounted,
 .productlist article .price span {
   display: none;
