@@ -112,3 +112,7 @@ p {
   background: red;
   padding: 0.2rem;
 }
+
+.nowprice {
+  font-weight: bold;
+}

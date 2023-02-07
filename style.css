@@ -65,13 +65,15 @@ ul {
 li {
   list-style-type: none;
   background-color: white;
-  padding: 40px;
   border-radius: 10px;
+  width: 60%;
+  padding: 50px;
+  margin-inline: auto;
 }
 
 @media (max-width: 700px) {
-  .felx {
+  .flex {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
   }
 }

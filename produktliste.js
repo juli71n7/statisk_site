@@ -1,6 +1,11 @@
-const fil = `https://kea-alt-del.dk/t7/api/products?limit=20`;
+const urlParams = new URLSearchParams(window.location.search);
+const cat = urlParams.get("cat");
+const fil = `https://kea-alt-del.dk/t7/api/products?limit=20&category=${cat}`;
+
+document.querySelector("h2").textContent = cat;
 
 function hentData() {
+  console.log(fil);
   fetch(fil)
     .then((response) => response.json())
     .then(visData);
